@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClinIQ - IA para Clínicas Modernas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: #f4f7f9; color: #333; scroll-behavior: smooth; }
+    header.hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?clinic,doctor,technology') center/cover no-repeat; color: white; padding: 140px 20px; text-align: center; }
+    .hero h1 { font-size: 3.2rem; margin-bottom: 20px; animation: fadeInDown 1s ease-out; }
+    .hero p { font-size: 1.3rem; margin-bottom: 30px; animation: fadeInUp 1.5s ease-out; }
+    .cta-button { background-color: #00c972; color: white; padding: 14px 30px; border: none; border-radius: 30px; text-decoration: none; font-weight: 600; transition: background 0.3s, transform 0.3s; }
+    .cta-button:hover { background-color: #009d5c; transform: scale(1.05); }
+    section { padding: 80px 20px; text-align: center; position: relative; }
+    .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
+    .card { background: white; border-radius: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); padding: 40px 25px; width: 300px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+    .card i { font-size: 2.8rem; color: #00c972; margin-bottom: 15px; }
+    .testimonial-slider { display: flex; overflow: hidden; }
+    .testimonial { display: none; padding: 20px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); margin: 0 10px; flex: 1; text-align: center; }
+    .testimonial.active { display: block; }
+    footer { background: #222; color: white; padding: 60px 20px; text-align: center; }
+    footer p { color: #aaa; margin-top: 10px; }
+    h2 { font-size: 2.4rem; margin-bottom: 30px; }
+    @keyframes fadeInDown { 0% { opacity: 0; transform: translateY(-20px); } 100% { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>ClinIQ - Inteligência Artificial para Clínicas</h1>
+    <p>Automatiza o atendimento no WhatsApp, aumenta as marcações e melhora a experiência do paciente.</p>
+    <a href="#planos" class="cta-button">Ver Planos</a>
+  </header>
+
+  <section class="testimonials">
+    <h2><i class="fa-solid fa-comment"></i> Testemunhos de Clientes</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <p>"A ClinIQ transformou a maneira como atendemos nossos pacientes. O agendamento automatizado fez toda a diferença!"</p>
+        <span>- Dr. João Silva, Clínica Nova Vida</span>
+      </div>
+      <div class="testimonial">
+        <p>"A IA que eles oferecem é incrivelmente eficiente e tem uma interação super humana. Recomendo a todos!"</p>
+        <span>- Dra. Maria Costa, Clínica Saúde Total</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2><i class="fa-solid fa-brain"></i> Soluções Inteligentes</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <h3>Respostas Automáticas a Emails</h3>
+        <p>A IA gere a caixa de entrada, responde a perguntas e encaminha casos urgentes.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Relatórios Interativos</h3>
+        <p>Gráficos e dashboards com os principais indicadores da clínica.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-bullhorn"></i>
+        <h3>Gestão de Redes Sociais</h3>
+        <p>Publicações automáticas e personalizadas para atrair mais pacientes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    <div class="container">
+      <img src="https://source.unsplash.com/featured/?clinic,technology,team" alt="Clínica Moderna">
+      <p>Liberta a tua equipa das tarefas repetitivas. A IA cuida do atendimento — vocês cuidam das pessoas.</p>
+    </div>
+  </section>
+
+  <section class="pricing" id="planos">
+    <h2><i class="fa-solid fa-tags"></i> Planos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Starter</h3>
+        <p>WhatsApp + Setup</p>
+        <strong>99€/mês</strong>
+      </div>
+      <div class="card">
+        <h3>Pro</h3>
+        <p>+ Integrações & Suporte</p>
+        <strong>149€/mês</strong>
+      </div>
+      <div class="card">
+        <h3>Premium</h3>
+        <p>Tudo incluído + Relatórios + Formação</p>
+        <strong>199€/mês</strong>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h2>Pronto para modernizar a tua clínica?</h2>
+    <a href="https://wa.me/351912345678" class="cta-button">Falar com um Especialista</a>
+    <p>&copy; 2025 ClinIQ. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    let index = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    setInterval(() => {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }, 5000);
+  </script>
+</body>
+</html>
