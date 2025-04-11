@@ -1,0 +1,47 @@
+/* Variáveis de Cor */
+:root {
+    --azul-pt: #0066cc;       /* Azul institucional */
+    --verde-pt: #009944;      /* Verde de confirmação */
+    --cinza-escuro: #333333;
+}
+
+/* Estilos Globais */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--cinza-escuro);
+    margin: 0;
+    padding: 0;
+}
+
+.portugal-banner {
+    background-color: var(--azul-pt);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.9rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: var(--azul-pt);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+/* Layout Responsivo */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+}
