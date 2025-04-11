@@ -3,52 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MedFlow AI | Automação Inteligente para Clínicas</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Reduza rejeições de faturas e ganhe horas com IA certificada para o setor saúde em Portugal">
+    <title>MedFlow AI | Automação Inteligente para Clínicas Médicas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1E40AF;
+            --accent: #3B82F6;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --success: #10B981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #FFFFFF;
+        }
+        
+        /* Header */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin-bottom: 2rem;
+            color: #4B5563;
+        }
+        
+        /* Features */
+        .features {
+            padding: 5rem 5%;
+            background-color: white;
+        }
+        
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            padding: 2rem;
+            border-radius: 12px;
+            background-color: var(--light);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        
+        /* CTA */
+        .cta {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .cta:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Barra Superior -->
-    <div class="portugal-banner">
-        <p>⚡ <strong>12 clínicas portuguesas</strong> já aderiram em Julho!</p>
-    </div>
-
-    <!-- Cabeçalho -->
-    <header class="hero">
-        <h1>O Fim das Faturas Rejeitadas</h1>
-        <p class="subtitle">Solução <strong>certificada</strong> que reduz erros de faturação em clínicas portuguesas</p>
-        <a href="#demo" class="cta-button">Solicitar Demonstração</a>
-        
-        <div class="trust-badges">
-            <img src="assets/img/gdpr-badge.png" alt="Conformidade GDPR">
-            <img src="assets/img/ordem-medicos.png" alt="Parceiro da Ordem dos Médicos">
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="logo">MedFlow AI</div>
+        <div class="nav-links">
+            <a href="#features">Funcionalidades</a>
+            <a href="#pricing">Preços</a>
+            <a href="#contact">Contacto</a>
+            <a href="#demo" class="cta">Demonstração</a>
         </div>
-    </header>
+    </nav>
 
-    <!-- Integrações PT -->
-    <section class="pt-integrations">
-        <h2>Feito para a Realidade Portuguesa</h2>
-        <div class="integration-grid">
-            <div class="integration-card">
-                <img src="assets/img/adse-logo.png" alt="ADSE">
-                <p>Processamento automático de recibos verdes ADSE</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Transforme a Gestão da Sua Clínica com IA</h1>
+        <p>Reduza em 65% as rejeições de faturas e poupe 15+ horas semanais com a nossa plataforma inteligente</p>
+        <a href="#demo" class="cta">Agendar Demonstração</a>
+        
+        <div class="trust-badges" style="margin-top: 2rem;">
+            <img src="assets/img/gdpr-badge.png" alt="Conformidade GDPR" style="height: 40px; margin: 0 10px;">
+            <img src="assets/img/ordem-medicos.png" alt="Parceiro da Ordem dos Médicos" style="height: 40px; margin: 0 10px;">
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section class="features" id="features">
+        <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">Solução Completa para Clínicas</h2>
+        
+        <div class="features-container">
+            <div class="feature-card">
+                <h3>🔄 Processamento Automático</h3>
+                <p>Extrai dados de recibos e preenche automaticamente formulários ADSE, Médis e outros subsistemas</p>
             </div>
-            <div class="integration-card">
-                <img src="assets/img/medis-logo.png" alt="Médis">
-                <p>Compatível com faturas Médis e SAMS</p>
+            
+            <div class="feature-card">
+                <h3>📊 Dashboard Inteligente</h3>
+                <p>Monitorize em tempo real o estado das suas faturas e recebimentos</p>
             </div>
+            
+            <div class="feature-card">
+                <h3>🤖 Assistente Virtual</h3>
+                <p>Responde automaticamente a perguntas comuns de pacientes via SMS/Email</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrações -->
+    <section style="padding: 5rem 5%; background-color: var(--light); text-align: center;">
+        <h2 style="margin-bottom: 2rem;">Integrações Portuguesas</h2>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem;">
+            <img src="assets/img/adse-logo.png" alt="ADSE" style="height: 50px;">
+            <img src="assets/img/medis-logo.png" alt="Médis" style="height: 50px;">
+            <img src="assets/img/saude-mais-logo.png" alt="Saúde+" style="height: 50px;">
         </div>
     </section>
 
     <!-- Formulário de Contacto -->
-    <section id="demo" class="contact-form">
-        <h2>Experimente Grátis</h2>
-        <form action="https://formspree.io/f/seu-email" method="POST">
-            <input type="text" name="nome" placeholder="Seu Nome" required>
-            <input type="email" name="email" placeholder="Email da Clínica" required>
-            <input type="tel" name="telefone" placeholder="Telefone">
-            <button type="submit" class="cta-button">Enviar Pedido</button>
+    <section id="contact" style="padding: 5rem 5%; max-width: 800px; margin: 0 auto;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Fale Connosco</h2>
+        <form style="display: grid; gap: 1rem;">
+            <input type="text" placeholder="Nome da Clínica" style="padding: 0.75rem; border: 1px solid #E5E7EB; border-radius: 8px;">
+            <input type="email" placeholder="Email" style="padding: 0.75rem; border: 1px solid #E5E7EB; border-radius: 8px;">
+            <input type="tel" placeholder="Telefone" style="padding: 0.75rem; border: 1px solid #E5E7EB; border-radius: 8px;">
+            <textarea placeholder="Como podemos ajudar?" style="padding: 0.75rem; border: 1px solid #E5E7EB; border-radius: 8px; min-height: 120px;"></textarea>
+            <button type="submit" class="cta" style="width: 100%;">Enviar Mensagem</button>
         </form>
     </section>
+
+    <!-- Rodapé -->
+    <footer style="background-color: var(--dark); color: white; padding: 2rem 5%; text-align: center;">
+        <p>© 2024 MedFlow AI. Todos os direitos reservados.</p>
+        <div style="margin-top: 1rem;">
+            <a href="#" style="color: white; margin: 0 10px;">Termos</a>
+            <a href="#" style="color: white; margin: 0 10px;">Privacidade</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
