@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedFlow AI - Automação de Faturação para Clínicas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo-link">
+                <img src="assets/img/logo.png" alt="MedFlow AI" class="logo">
+            </a>
+            <nav class="main-nav">
+                <a href="#features">Funcionalidades</a>
+                <a href="pricing.html">Preços</a>
+                <a href="#roi-calculator">ROI</a>
+                <a href="#demo" class="cta-button">Demonstração</a>
+            </nav>
+            <button class="mobile-menu-button">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Faturação Automática para Clínicas Dentárias</h1>
+                <p class="subtitle">Reduza rejeições da ADSE em 65% e poupe 15+ horas/mês com a nossa IA especializada</p>
+                
+                <div class="cta-container">
+                    <a href="#upload" class="cta-primary">Testar Grátis</a>
+                    <p class="small-text">Processamos sua primeira fatura em 2 minutos</p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/img/demo-screen.png" alt="Demonstração da plataforma">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badge">
+                <img src="assets/img/adse-badge.png" alt="Integração ADSE Certificada">
+                <span>Integração Certificada</span>
+            </div>
+            <div class="badge">
+                <span>32+ Clínicas em Portugal</span>
+            </div>
+            <div class="badge">
+                <span>Suporte 24/7</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Upload Section -->
+    <section id="upload" class="upload-section">
+        <div class="container">
+            <h2>Converta seu PDF em formulário ADSE</h2>
+            <p class="section-description">Experimente agora nosso processador inteligente de faturas</p>
+            
+            <div class="upload-box">
+                <input type="file" id="pdf-upload" accept=".pdf">
+                <label for="pdf-upload" class="upload-label">
+                    <span class="upload-icon">📄</span>
+                    <span class="upload-text">Arraste seu recibo verde aqui ou clique para selecionar</span>
+                </label>
+                <div id="pdf-preview" class="pdf-preview"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section id="roi-calculator" class="roi-section">
+        <div class="container">
+            <h2>Calcule seu Potencial de Economia</h2>
+            <div class="roi-calculator">
+                <div class="roi-inputs">
+                    <div class="input-group">
+                        <label for="monthly-claims">Faturas por mês:</label>
+                        <input type="number" id="monthly-claims" min="0" value="50">
+                    </div>
+                    <div class="input-group">
+                        <label for="rejection-rate">Taxa de rejeição atual (%):</label>
+                        <input type="number" id="rejection-rate" min="0" max="100" value="25">
+                    </div>
+                    <div class="input-group">
+                        <label for="time-spent">Horas gastas com faturação:</label>
+                        <input type="number" id="time-spent" min="0" value="10">
+                    </div>
+                </div>
+                <div class="roi-results">
+                    <h3>Seu Resultado com MedFlow AI</h3>
+                    <div class="result-item">
+                        <span class="result-label">Redução de rejeições:</span>
+                        <span class="result-value" id="rejection-savings">65%</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Economia mensal:</span>
+                        <span class="result-value" id="money-saved">€812,50</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Horas poupadas:</span>
+                        <span class="result-value" id="time-saved">7,5h</span>
+                    </div>
+                    <button class="cta-secondary">Ver Planos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>Como a MedFlow AI Transforma Sua Clínica</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Processamento Automático</h3>
+                    <p>Extrai dados de recibos e preenche formulários ADSE automaticamente</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>IA Especializada</h3>
+                    <p>Aprendizado contínuo das regras de faturação portuguesas</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Dashboard Inteligente</h3>
+                    <p>Monitorize todas as faturas e recebimentos em tempo real</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Revolucionar Sua Faturação?</h2>
+            <a href="pricing.html" class="cta-primary">Começar Agora</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="assets/img/logo.png" alt="MedFlow AI" class="footer-logo">
+                    <p>Automatização inteligente para clínicas médicas em Portugal</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Links</h4>
+                    <a href="#features">Funcionalidades</a>
+                    <a href="pricing.html">Preços</a>
+                    <a href="#demo">Demonstração</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Contactos</h4>
+                    <a href="mailto:suporte@medflow.ai">suporte@medflow.ai</a>
+                    <a href="tel:+351123456789">+351 123 456 789</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 MedFlow AI. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/pdf.js"></script>
+    <script src="assets/js/roi.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
